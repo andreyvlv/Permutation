@@ -11,16 +11,23 @@ namespace PermutationTest
         static void Main(string[] args)
         {            
             string str = "abcd";
-            List<string> permutations = Permute.GetPermutation(str);
-            Print(permutations);
+            var permutaionIntArray = GenericPermute.GetPermutation(new[] { 1, 2, 4 }.ToList());
+            var permutationString = GenericPermute.GetPermutation(str.ToList());
+            Print(permutaionIntArray);
+            Console.WriteLine();
+            Print(permutationString);
             Console.ReadKey();
         }
 
-        static void Print<T>(IEnumerable<T> list)
+        static void Print<T>(IEnumerable<IEnumerable<T>> list)
         {
-            foreach (var item in list)
+            foreach (var array in list)
             {
-                Console.WriteLine(item);
+                foreach (var item in array)
+                {
+                    Console.Write(item);
+                }
+                Console.WriteLine();
             }
         }
     }
