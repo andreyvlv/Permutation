@@ -18,11 +18,8 @@ namespace PermutationTest
         static void PermutationAlgorithm<T>(int n, List<T> array, List<List<T>> list)
         {
             if (n == 0)
-            {
-                var temp = new List<T>();
-                foreach (var item in array)                
-                    temp.Add(item);                              
-                list.Add(temp);
+            {                                        
+                list.Add(new List<T>(array));
             }
             else
             {
