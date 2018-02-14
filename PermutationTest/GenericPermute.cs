@@ -15,7 +15,7 @@ namespace PermutationTest
             return permutationResult;
         }
 
-        public static void PermutationAlgorithm<T>(int n, List<T> array, List<List<T>> list)
+        static void PermutationAlgorithm<T>(int n, List<T> array, List<List<T>> list)
         {
             if (n == 0)
             {

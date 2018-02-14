@@ -9,10 +9,9 @@ namespace PermutationTest
     class Program
     {
         static void Main(string[] args)
-        {            
-            string str = "abcd";
+        {                       
             var permutaionIntArray = GenericPermute.GetPermutation(new[] { 1, 2, 4 }.ToList());
-            var permutationString = GenericPermute.GetPermutation(str.ToList());
+            var permutationString = GenericPermute.GetPermutation("abcd".ToList());
             Print(permutaionIntArray);
             Console.WriteLine();
             Print(permutationString);
@@ -24,11 +23,9 @@ namespace PermutationTest
             foreach (var array in list)
             {
                 foreach (var item in array)
-                {
                     Console.Write(item);
-                }
                 Console.WriteLine();
-            }
+            }                        
         }
     }
 }
