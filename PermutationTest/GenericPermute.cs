@@ -11,6 +11,7 @@ namespace PermutationTest
         public static List<List<T>> GetPermutation<T>(List<T> array)
         {
             var permutationResult = new List<List<T>>();
+            // -1 стоит для правильного перебора, при array.Count вываливается с исключением
             PermutationAlgorithm(array.Count - 1, array, permutationResult);
             return permutationResult;
         }
